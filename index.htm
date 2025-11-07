@@ -113,6 +113,23 @@
         .delay-800 {
             transition-delay: 0.8s;
         }
+
+        /* Mobile-specific text sizing */
+        @media (max-width: 640px) {
+            .mobile-text-sm {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+            
+            .mobile-text-xs {
+                font-size: 0.75rem;
+                line-height: 1rem;
+            }
+            
+            .mobile-leading-tight {
+                line-height: 1.25;
+            }
+        }
     </style>
 </head>
 
@@ -128,14 +145,13 @@
     </div>
 
     <!-- Navigation -->
-    <!-- Added scroll-reveal and scale-in for navigation fade-down effect -->
     <nav
         class="fixed w-full bg-gray-900/40 backdrop-blur-xl border-b border-gray-800 z-50 transition-all duration-300 scroll-reveal scale-in">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="text-2xl font-bold scroll-reveal delay-100">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="text-xl md:text-2xl font-bold scroll-reveal delay-100">
                     <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                        &lt;B.Sharath Chandra /&gt;
+                        &lt;B.Sharath /&gt;
                     </span>
                 </div>
                 <div class="hidden md:flex space-x-8">
@@ -149,12 +165,12 @@
                         class="text-gray-300 hover:text-cyan-400 font-medium transition-colors scroll-reveal delay-500">Resume</a>
                     <a href="#projects"
                         class="text-gray-300 hover:text-cyan-400 font-medium transition-colors scroll-reveal delay-600">Projects</a>
-                    <a href="#contact"
+                    <a href="#links-profiles"
                         class="text-gray-300 hover:text-cyan-400 font-medium transition-colors scroll-reveal delay-700">Contact</a>
                 </div>
-                <!-- Mobile Menu Button - Placeholder -->
+                <!-- Mobile Menu Button -->
                 <button class="md:hidden text-gray-300 hover:text-cyan-400">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -165,31 +181,31 @@
 
     <!-- Hero Section -->
     <section id="home"
-        class="min-h-screen gradient-bg flex items-center justify-center px-4 pt-24 relative overflow-hidden">
+        class="min-h-screen gradient-bg flex items-center justify-center px-4 pt-20 md:pt-24 relative overflow-hidden">
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <!-- Hero Text with animation classes -->
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 scroll-reveal delay-100">
+            <!-- Hero Text with responsive sizing -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 scroll-reveal delay-100">
                 Hi, I'm <span
                     class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent animate-pulse">B.Sharath
                     Chandra</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 scroll-reveal delay-200">
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 md:mb-8 scroll-reveal delay-200 mobile-text-sm">
                 <span class="text-cyan-400">🚀</span> JAVA-Full Stack Developer & Front-end Developer
             </p>
-            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed scroll-reveal delay-300">
+            <p class="text-base md:text-lg text-gray-400 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed md:leading-loose scroll-reveal delay-300 mobile-text-sm mobile-leading-tight">
                 Skilled in Java for developing robust backend logic and exploring full-stack development to bridge
                 design with functionality,and Passionate about building dynamic and user-friendly web applications using
                 React and modern frontend technologies.
             </p>
 
-            <!-- Buttons with staggered animation -->
-            <div class="flex flex-wrap gap-4 justify-center mb-12">
+            <!-- Buttons with responsive sizing -->
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 md:mb-12">
                 <a href="#resume"
-                    class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 neon-glow scroll-reveal delay-400">
+                    class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 neon-glow scroll-reveal delay-400 text-sm md:text-base">
                     📃 My Resume
                 </a>
                 <a href="#projects"
-                    class="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full font-semibold hover:bg-cyan-400/10 transform hover:scale-105 transition-all duration-300 scroll-reveal delay-500">
+                    class="border-2 border-cyan-400 text-cyan-400 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold hover:bg-cyan-400/10 transform hover:scale-105 transition-all duration-300 scroll-reveal delay-500 text-sm md:text-base">
                     🎨 View Work
                 </a>
             </div>
@@ -197,56 +213,50 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-4 bg-[#05050f] relative overflow-hidden">
+    <section id="about" class="py-16 md:py-20 px-4 bg-[#05050f] relative overflow-hidden">
         <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 scroll-reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 scroll-reveal">
                 About <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Me</span>
                 👋
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-12 scroll-reveal delay-100">
+            <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8 md:mb-12 scroll-reveal delay-100">
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Text Content -->
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-300 leading-relaxed scroll-reveal delay-200">
+                <div class="space-y-4 md:space-y-6">
+                    <p class="text-base md:text-lg text-gray-300 leading-relaxed scroll-reveal delay-200 mobile-text-sm mobile-leading-tight">
                         🚀 I have a strong interest in Java programming, focusing on writing clean, efficient, and
-                        scalable code.
-                        I love understanding the logic behind applications — from OOP principles to building real-world
+                        scalable code. I love understanding the logic behind applications — from OOP principles to building real-world
                         console and backend projects.
-                        Currently, I’m exploring how Java can integrate with frontend technologies to build full-stack
-                        solutions.
                     </p>
-                    <p class="text-lg text-gray-300 leading-relaxed scroll-reveal delay-300">
-                        💡I’m deeply passionate about crafting engaging, responsive, and visually appealing user
-                        interfaces.
-                        I enjoy working with React, Tailwind CSS, and modern web tools to create seamless digital
+                    <p class="text-base md:text-lg text-gray-300 leading-relaxed scroll-reveal delay-300 mobile-text-sm mobile-leading-tight">
+                        💡 I'm deeply passionate about crafting engaging, responsive, and visually appealing user
+                        interfaces. I enjoy working with React, Tailwind CSS, and modern web tools to create seamless digital
                         experiences.
-                        Exploring component-based design, state management, and smooth user interactions keeps me
-                        motivated to learn more every day.
                     </p>
                 </div>
-                <!-- Stats Grid with staggered animation -->
-                <div class="grid grid-cols-2 gap-6">
+                <!-- Stats Grid with responsive sizing -->
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
                     <div
-                        class="dark-card p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-400">
-                        <div class="text-4xl font-extrabold mb-2 text-cyan-400">2+</div>
-                        <div class="text-gray-300 font-medium">Internship Experience</div>
+                        class="dark-card p-4 md:p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-400">
+                        <div class="text-2xl md:text-4xl font-extrabold mb-2 text-cyan-400">2+</div>
+                        <div class="text-gray-300 font-medium text-sm md:text-base">Internship Experience</div>
                     </div>
                     <div
-                        class="dark-card p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-500">
-                        <div class="text-4xl font-extrabold mb-2 text-blue-400">5+</div>
-                        <div class="text-gray-300 font-medium">Projects Done</div>
+                        class="dark-card p-4 md:p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-500">
+                        <div class="text-2xl md:text-4xl font-extrabold mb-2 text-blue-400">5+</div>
+                        <div class="text-gray-300 font-medium text-sm md:text-base">Projects Done</div>
                     </div>
                     <div
-                        class="dark-card p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-600">
-                        <div class="text-4xl font-extrabold mb-2 text-purple-400">4+</div>
-                        <div class="text-gray-300 font-medium">Certifications</div>
+                        class="dark-card p-4 md:p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-600">
+                        <div class="text-2xl md:text-4xl font-extrabold mb-2 text-purple-400">4+</div>
+                        <div class="text-gray-300 font-medium text-sm md:text-base">Certifications</div>
                     </div>
                     <div
-                        class="dark-card p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-700">
-                        <div class="text-4xl font-extrabold mb-2 text-green-400">10+</div>
-                        <div class="text-gray-300 font-medium">Technologies</div>
+                        class="dark-card p-4 md:p-6 rounded-2xl text-center transform hover:scale-[1.02] transition-all duration-300 scroll-reveal scale-in delay-700">
+                        <div class="text-2xl md:text-4xl font-extrabold mb-2 text-green-400">10+</div>
+                        <div class="text-gray-300 font-medium text-sm md:text-base">Technologies</div>
                     </div>
                 </div>
             </div>
@@ -254,30 +264,30 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 bg-[#05050f] relative overflow-hidden">
+    <section id="skills" class="py-16 md:py-20 px-4 bg-[#05050f] relative overflow-hidden">
         <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 scroll-reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 scroll-reveal">
                 My <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Skills</span>
                 💪
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-12 scroll-reveal delay-100">
+            <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8 md:mb-12 scroll-reveal delay-100">
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Frontend Card -->
                 <div
-                    class="dark-card p-8 rounded-3xl transform hover:scale-[1.03] transition-all duration-500 scroll-reveal delay-200">
+                    class="dark-card p-6 md:p-8 rounded-2xl md:rounded-3xl transform hover:scale-[1.03] transition-all duration-500 scroll-reveal delay-200">
                     <div
-                        class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-xl">
+                        <svg class="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-cyan-400 text-center">Frontend</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-center gap-2">⚛️ React.js </li>
-                        <li class="flex items-center gap-2">📜 JavaScript /Bootsrap</li>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-cyan-400 text-center">Frontend</h3>
+                    <ul class="space-y-2 md:space-y-3 text-gray-300 text-sm md:text-base">
+                        <li class="flex items-center gap-2">⚛️ React.js</li>
+                        <li class="flex items-center gap-2">📜 JavaScript / Bootstrap</li>
                         <li class="flex items-center gap-2">🎨 HTML5 / CSS3</li>
                         <li class="flex items-center gap-2">🌊 Tailwind CSS</li>
                     </ul>
@@ -285,18 +295,18 @@
 
                 <!-- Backend Card -->
                 <div
-                    class="dark-card p-8 rounded-3xl transform hover:scale-[1.03] transition-all duration-500 scroll-reveal delay-400">
+                    class="dark-card p-6 md:p-8 rounded-2xl md:rounded-3xl transform hover:scale-[1.03] transition-all duration-500 scroll-reveal delay-400">
                     <div
-                        class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-xl">
+                        <svg class="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-purple-400 text-center">Backend</h3>
-                    <ul class="space-y-3 text-gray-300">
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-purple-400 text-center">Backend</h3>
+                    <ul class="space-y-2 md:space-y-3 text-gray-300 text-sm md:text-base">
                         <li class="flex items-center gap-2">🟢 Java / Express</li>
-                        <li class="flex items-center gap-2">🗄️ Oracle/ MySQL</li>
+                        <li class="flex items-center gap-2">🗄️ Oracle / MySQL</li>
                         <li class="flex items-center gap-2">🔌 RESTful APIs</li>
                         <li class="flex items-center gap-2">🔥 Firebase</li>
                     </ul>
@@ -304,18 +314,18 @@
 
                 <!-- Tools Card -->
                 <div
-                    class="dark-card p-8 rounded-3xl transform hover:scale-[1.03] transition-all duration-500 scroll-reveal delay-600">
+                    class="dark-card p-6 md:p-8 rounded-2xl md:rounded-3xl transform hover:scale-[1.03] transition-all duration-500 scroll-reveal delay-600">
                     <div
-                        class="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-xl">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 mx-auto shadow-xl">
+                        <svg class="w-8 h-8 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400 text-center">Tools & Others</h3>
-                    <ul class="space-y-3 text-gray-300">
+                    <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-green-400 text-center">Tools & Others</h3>
+                    <ul class="space-y-2 md:space-y-3 text-gray-300 text-sm md:text-base">
                         <li class="flex items-center gap-2">📦 Git / GitHub</li>
                         <li class="flex items-center gap-2">💻 VS Code</li>
                         <li class="flex items-center gap-2">🎨 Figma / Adobe XD</li>
@@ -327,19 +337,19 @@
     </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="py-20 px-4 bg-[#05050f] relative overflow-hidden text-white">
+    <section id="resume" class="py-16 md:py-20 px-4 bg-[#05050f] relative overflow-hidden text-white">
         <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 scroll-reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 scroll-reveal">
                 My <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Resume</span>
                 📄
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-12 scroll-reveal delay-100">
+            <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8 md:mb-12 scroll-reveal delay-100">
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
-                    <h3 class="text-3xl font-bold mb-8 text-cyan-400 flex items-center gap-3 scroll-reveal delay-200">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-cyan-400 flex items-center gap-3 scroll-reveal delay-200">
+                        <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
@@ -347,50 +357,52 @@
                     </h3>
 
                     <div
-                        class="dark-card p-6 rounded-2xl mb-6 border-l-4 border-cyan-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-300">
-                        <div class="flex items-start justify-between mb-2">
-                            <h4 class="text-xl font-bold text-white">B.Tech in Engineering</h4>
+                        class="dark-card p-4 md:p-6 rounded-2xl mb-4 md:mb-6 border-l-4 border-cyan-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-300">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
+                            <h4 class="text-lg md:text-xl font-bold text-white">B.Tech in Engineering</h4>
                             <span class="text-sm text-cyan-400 font-semibold">2021-2025</span>
                         </div>
-                        <p class="text-gray-400 font-medium mb-2">Malla Reddy Institute of Engineering and Technology
-                        </p>
-                        <p class="text-gray-300">Completed undergraduation degree with 70%.</p>
+                        <p class="text-gray-400 font-medium mb-2 text-sm md:text-base">Malla Reddy Institute of Engineering and Technology</p>
+                        <p class="text-gray-300 text-sm md:text-base">Completed undergraduation degree with 70%.</p>
                     </div>
 
                     <div
-                        class="dark-card p-6 rounded-2xl mb-6 border-l-4 border-blue-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-400">
-                        <div class="flex items-start justify-between mb-2">
-                            <h4 class="text-xl font-bold text-white">12th Grade / Intermediate</h4>
+                        class="dark-card p-4 md:p-6 rounded-2xl mb-4 md:mb-6 border-l-4 border-blue-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-400">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
+                            <h4 class="text-lg md:text-xl font-bold text-white">12th Grade / Intermediate</h4>
                             <span class="text-sm text-blue-400 font-semibold">2019-2021</span>
                         </div>
-                        <p class="text-gray-400 font-medium mb-2">MJP College</p>
-                        <p class="text-gray-300">Completed 12th grade with 82%.</p>
+                        <p class="text-gray-400 font-medium mb-2 text-sm md:text-base">MJP College</p>
+                        <p class="text-gray-300 text-sm md:text-base">Completed 12th grade with 82%.</p>
                     </div>
 
                     <div
-                        class="dark-card p-6 rounded-2xl border-l-4 border-purple-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-500">
-                        <h4 class="text-xl font-bold text-white mb-3">Certifications 🏆</h4>
-                        <ul class="space-y-2 text-gray-300">
-                            <li class="flex items-center gap-2">
-                                <span class="text-cyan-400">▹</span><a href="https://drive.google.com/file/d/1Bj8fiaKCWpUK2CX9SgX9SuP4PkJhDDHN/view?usp=drive_link">React Course Completion - Scaler (Link)</a>
+                        class="dark-card p-4 md:p-6 rounded-2xl border-l-4 border-purple-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-500">
+                        <h4 class="text-lg md:text-xl font-bold text-white mb-3">Certifications 🏆</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm md:text-base">
+                            <li class="flex items-start gap-2">
+                                <span class="text-cyan-400 mt-1">▹</span>
+                                <a href="https://drive.google.com/file/d/1Bj8fiaKCWpUK2CX9SgX9SuP4PkJhDDHN/view?usp=drive_link" class="hover:text-cyan-400 transition-colors">React Course Completion - Scaler (Link)</a>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-blue-400">▹</span><a href="https://drive.google.com/file/d/1sf3YV9Un1A55d85u_CuiMh3i8W6T9UwC/view?usp=drive_link">Web Development Course Completion-simpli learn(Link) </a> 
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">▹</span>
+                                <a href="https://drive.google.com/file/d/1sf3YV9Un1A55d85u_CuiMh3i8W6T9UwC/view?usp=drive_link" class="hover:text-blue-400 transition-colors">Web Development Course Completion-simpli learn(Link)</a>
                             </li>
-                               <li class="flex items-center gap-2">
-                                <span class="text-blue-400">▹</span><a href="https://lnkd.in/eX6KHkQM">Full stack Web Development Course Completion-Uemy(Link) </a> 
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">▹</span>
+                                <a href="https://lnkd.in/eX6KHkQM" class="hover:text-blue-400 transition-colors">Full stack Web Development Course Completion-Udemy(Link)</a>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-purple-400">▹</span> How to CSS Boot Camp-code karo
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-400 mt-1">▹</span>
+                                How to CSS Boot Camp-code karo
                             </li>
-                          
                         </ul>
                     </div>
                 </div>
 
                 <div>
-                    <h3 class="text-3xl font-bold mb-8 text-blue-400 flex items-center gap-3 scroll-reveal delay-200">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-blue-400 flex items-center gap-3 scroll-reveal delay-200">
+                        <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
@@ -398,13 +410,13 @@
                     </h3>
 
                     <div
-                        class="dark-card p-6 rounded-2xl mb-6 border-l-4 border-green-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-300">
-                        <div class="flex items-start justify-between mb-2">
-                            <h4 class="text-xl font-bold text-white">Intern</h4>
-                            <span class="text-sm text-green-400 font-semibold">Currently Persuing</span>
+                        class="dark-card p-4 md:p-6 rounded-2xl mb-4 md:mb-6 border-l-4 border-green-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-300">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2 gap-1">
+                            <h4 class="text-lg md:text-xl font-bold text-white">Intern</h4>
+                            <span class="text-sm text-green-400 font-semibold">Currently Pursuing</span>
                         </div>
-                        <p class="text-gray-400 font-medium mb-3">Pinnacle Labs</p>
-                        <ul class="space-y-2 text-gray-300">
+                        <p class="text-gray-400 font-medium mb-3 text-sm md:text-base">Pinnacle Labs</p>
+                        <ul class="space-y-2 text-gray-300 text-sm md:text-base">
                             <li class="flex items-start gap-2">
                                 <span class="text-green-400 mt-1">•</span>
                                 <span>Gaining hands-on experience in real-world application development.</span>
@@ -417,247 +429,221 @@
                     </div>
 
                     <div
-                        class="dark-card p-6 rounded-2xl border-l-4 border-yellow-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-400">
-                        <h4 class="text-xl font-bold text-white mb-3">Key Projects 🚀</h4>
-                        <ul class="space-y-2 text-gray-300">
-                            <li class="flex items-center gap-2">
-                                <span class="text-yellow-400">▹</span> **Java Full Stack Project (Current)**: Developing
-                                a comprehensive application using Java full-stack technologies.
+                        class="dark-card p-4 md:p-6 rounded-2xl border-l-4 border-yellow-500 transform hover:scale-[1.02] transition-all duration-300 scroll-reveal delay-400">
+                        <h4 class="text-lg md:text-xl font-bold text-white mb-3">Key Projects 🚀</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm md:text-base">
+                            <li class="flex items-start gap-2">
+                                <span class="text-yellow-400 mt-1">▹</span>
+                                <span><strong>Java Full Stack Project</strong>: Developing a comprehensive application using Java full-stack technologies.</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-orange-400">▹</span> **Your Health and Fitness Toolkit**: A project
-                                demonstrating frontend or full-stack web development skills.
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-400 mt-1">▹</span>
+                                <span><strong>Your Health and Fitness Toolkit</strong>: A project demonstrating frontend or full-stack web development skills.</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-cyan-400">▹</span> **Zomato Clone**: Replicated key features of a
-                                popular food delivery service, showcasing UI/UX and API integration.
+                            <li class="flex items-start gap-2">
+                                <span class="text-cyan-400 mt-1">▹</span>
+                                <span><strong>Zomato Clone</strong>: Replicated key features of a popular food delivery service.</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-blue-400">▹</span> **Rock Paper Scissors Game**: A foundational
-                                project built to practice core programming logic.
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-400 mt-1">▹</span>
+                                <span><strong>Rock Paper Scissors Game</strong>: A foundational project built to practice core programming logic.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <!-- Download Resume Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-7 px-4 mt-8 md:mt-12">
+                <!-- Front-end Resume -->
+                <div class="text-center scroll-reveal delay-600 w-full sm:w-auto">
+                    <a href="https://drive.google.com/file/d/1uI24qVlOTxaYd-k5JG1CuOlzWaAwQ7DY/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center justify-center gap-2 md:gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full sm:w-auto min-h-[50px] md:min-h-[64px] text-sm md:text-base">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Front-end Resume
+                    </a>
+                </div>
+
+                <!-- Back-end Resume -->
+                <div class="text-center scroll-reveal delay-600 w-full sm:w-auto">
+                    <a href="https://drive.google.com/file/d/1FTZCYx3AC9ThaPAfC1CW8JyDVWh4j4bp/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center justify-center gap-2 md:gap-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full sm:w-auto min-h-[50px] md:min-h-[64px] text-sm md:text-base">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Back-end Resume
+                    </a>
+                </div>
+
+                <!-- Full-stack Resume -->
+                <div class="text-center scroll-reveal delay-600 w-full sm:w-auto">
+                    <a href="https://drive.google.com/file/d/1Fn5CkJdoxVwWgMWQjTEg377rT0HihlV6/view?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group inline-flex items-center justify-center gap-2 md:gap-3 bg-gradient-to-r from-green-500 to-teal-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full sm:w-auto min-h-[50px] md:min-h-[64px] text-sm md:text-base">
+                        <svg class="w-4 h-4 md:w-5 md:h-5 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Full-stack Resume
+                    </a>
+                </div>
+            </div>
         </div>
-
-
-        <!-- Download Resume Button -->
-        <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-7 px-4">
-    <!-- Front-end Resume -->
-    <div class="text-center mt-6 lg:mt-12 scroll-reveal delay-600 w-full lg:w-auto">
-        <a href="https://drive.google.com/file/d/1uI24qVlOTxaYd-k5JG1CuOlzWaAwQ7DY/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full lg:w-auto min-h-[64px]">
-            <svg class="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <span class="text-sm lg:text-base">Front-end Resume</span>
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-        </a>
-        <p class="text-xs text-gray-400 mt-2 lg:mt-3 hidden lg:block">React • Next.js • TypeScript</p>
-    </div>
-
-    <!-- Back-end Resume -->
-    <div class="text-center mt-6 lg:mt-12 scroll-reveal delay-600 w-full lg:w-auto">
-        <a href="https://drive.google.com/file/d/1FTZCYx3AC9ThaPAfC1CW8JyDVWh4j4bp/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full lg:w-auto min-h-[64px]">
-            <svg class="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <span class="text-sm lg:text-base">Back-end Resume</span>
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-        </a>
-        <p class="text-xs text-gray-400 mt-2 lg:mt-3 hidden lg:block">Node.js • Express • MongoDB</p>
-    </div>
-
-    <!-- Full-stack Resume -->
-    <div class="text-center mt-6 lg:mt-12 scroll-reveal delay-600 w-full lg:w-auto">
-        <a href="https://drive.google.com/file/d/1Fn5CkJdoxVwWgMWQjTEg377rT0HihlV6/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-teal-600 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full lg:w-auto min-h-[64px]">
-            <svg class="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <span class="text-sm lg:text-base">Full-stack Resume</span>
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-green-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-        </a>
-        <p class="text-xs text-gray-400 mt-2 lg:mt-3 hidden lg:block">MERN Stack • Full Stack</p>
-    </div>
-</div>
-    
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 bg-[#05050f] relative overflow-hidden">
+    <section id="projects" class="py-16 md:py-20 px-4 bg-[#05050f] relative overflow-hidden">
         <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 scroll-reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 scroll-reveal">
                 My <span
                     class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Projects</span> 🚀
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-12 scroll-reveal delay-100">
+            <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8 md:mb-12 scroll-reveal delay-100">
             </div>
-            <a href="https://zomato-clone-8uae.vercel.app/">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <a href="https://zomato-clone-8uae.vercel.app/" class="block">
                     <div
-                        class="dark-card p-6 rounded-2xl transform hover:scale-[1.03] hover:shadow-cyan-500/50 hover:ring-2 hover:ring-cyan-400 transition-all duration-300 scroll-reveal scale-in delay-200">
+                        class="dark-card p-4 md:p-6 rounded-2xl transform hover:scale-[1.03] hover:shadow-cyan-500/50 hover:ring-2 hover:ring-cyan-400 transition-all duration-300 scroll-reveal scale-in delay-200 h-full">
                         <div
-                            class="w-full h-48 bg-gradient-to-br from-cyan-700/50 to-blue-800/50 rounded-xl mb-4 flex items-center justify-center text-4xl text-white/50">
-                            <img src="https://github.com/sharath4188/B.Sharath-chandra-Portfolio/blob/main/zomato%20clone.png?raw=true" alt="">
-
-
+                            class="w-full h-40 md:h-48 bg-gradient-to-br from-cyan-700/50 to-blue-800/50 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                            <img src="https://github.com/sharath4188/B.Sharath-chandra-Portfolio/blob/main/zomato%20clone.png?raw=true" 
+                                 alt="Zomato Clone" 
+                                 class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-xl font-bold text-cyan-400 mb-2">Zomato clone-website</h3>
-                        <p class="text-gray-400 mb-4">🍽️ Zomato Clone – A React-based web app featuring search,
-                            filters,
-                            authentication, and cart functionality, replicating a modern food delivery platform
-                            experience.
+                        <h3 class="text-lg md:text-xl font-bold text-cyan-400 mb-2">Zomato Clone Website</h3>
+                        <p class="text-gray-400 mb-4 text-sm md:text-base mobile-text-sm mobile-leading-tight">
+                            🍽️ Zomato Clone – A React-based web app featuring search, filters, authentication, and cart functionality.
                         </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Javascript</span>
-                            <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">HTML/tailwind
-                                css</span>
+                        <div class="flex flex-wrap gap-1 md:gap-2">
+                            <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs md:text-sm">React</span>
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs md:text-sm">JavaScript</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded-full text-xs md:text-sm">HTML/Tailwind</span>
                         </div>
                     </div>
-            </a>
-            <a href="https://sharath4188.github.io/Health-Fitness-Toolkit/">
+                </a>
 
-                <div
-                    class="dark-card p-6 rounded-2xl transform hover:scale-[1.03] hover:shadow-cyan-500/50 hover:ring-2 hover:ring-cyan-400 transition-all duration-300 scroll-reveal scale-in delay-200">
-
+                <a href="https://sharath4188.github.io/Health-Fitness-Toolkit/" class="block">
                     <div
-                        class="w-full h-48 bg-gradient-to-br from-purple-700/50 to-pink-800/50 rounded-xl mb-4 flex items-center justify-center text-4xl text-white/50">
-                        <img src="https://github.com/sharath4188/B.Sharath-chandra-Portfolio/blob/main/health%20and%20fitness.png?raw=true" alt="">
-
+                        class="dark-card p-4 md:p-6 rounded-2xl transform hover:scale-[1.03] hover:shadow-cyan-500/50 hover:ring-2 hover:ring-cyan-400 transition-all duration-300 scroll-reveal scale-in delay-200 h-full">
+                        <div
+                            class="w-full h-40 md:h-48 bg-gradient-to-br from-purple-700/50 to-pink-800/50 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                            <img src="https://github.com/sharath4188/B.Sharath-chandra-Portfolio/blob/main/health%20and%20fitness.png?raw=true" 
+                                 alt="Health Fitness Toolkit" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-purple-400 mb-2">Health Fitness Toolkit</h3>
+                        <p class="text-gray-400 mb-4 text-sm md:text-base mobile-text-sm mobile-leading-tight">
+                            💪 Health and Fitness Toolkit – A simple application that helps users track their fitness goals.
+                        </p>
+                        <div class="flex flex-wrap gap-1 md:gap-2">
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs md:text-sm">JavaScript</span>
+                            <span class="px-2 py-1 bg-pink-500/20 text-pink-400 rounded-full text-xs md:text-sm">CSS</span>
+                            <span class="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs md:text-sm">HTML</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-purple-400 mb-2">Health-fitness-toolkit</h3>
-                    <p class="text-gray-400 mb-4">💪 Health and
-                        Fitness Toolkit – A simple application that helps users track their fitness
-                        goals using conditional logic and data structures.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">java script</span>
-                        <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">CSS</span>
-                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">HTML</span>
-                    </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="https://sharath4188.github.io/Rock-paper-scissor/">
-
-                <div
-                    class="dark-card p-6 rounded-2xl transform hover:scale-[1.03] hover:shadow-cyan-500/50 hover:ring-2 hover:ring-cyan-400 transition-all duration-300 scroll-reveal scale-in delay-200">
+                <a href="https://sharath4188.github.io/Rock-paper-scissor/" class="block">
                     <div
-                        class="w-full h-48 bg-gradient-to-br from-green-700/50 to-teal-800/50 rounded-xl mb-4 flex items-center justify-center text-4xl text-white/50">
-                        <img src="https://github.com/sharath4188/B.Sharath-chandra-Portfolio/blob/main/rock%20paper%20scissor.png?raw=true" alt="">
-
+                        class="dark-card p-4 md:p-6 rounded-2xl transform hover:scale-[1.03] hover:shadow-cyan-500/50 hover:ring-2 hover:ring-cyan-400 transition-all duration-300 scroll-reveal scale-in delay-200 h-full">
+                        <div
+                            class="w-full h-40 md:h-48 bg-gradient-to-br from-green-700/50 to-teal-800/50 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                            <img src="https://github.com/sharath4188/B.Sharath-chandra-Portfolio/blob/main/rock%20paper%20scissor.png?raw=true" 
+                                 alt="Rock Paper Scissors Game" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-green-400 mb-2">Rock Paper Scissors Game</h3>
+                        <p class="text-gray-400 mb-4 text-sm md:text-base mobile-text-sm mobile-leading-tight">
+                            🪨 Rock Paper Scissors Game – A fun and interactive browser game built using HTML, CSS, and JavaScript.
+                        </p>
+                        <div class="flex flex-wrap gap-1 md:gap-2">
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded-full text-xs md:text-sm">JavaScript</span>
+                            <span class="px-2 py-1 bg-teal-500/20 text-teal-400 rounded-full text-xs md:text-sm">CSS</span>
+                            <span class="px-2 py-1 bg-gray-500/20 text-gray-400 rounded-full text-xs md:text-sm">HTML</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-green-400 mb-2">Rock paper scissor game</h3>
-                    <p class="text-gray-400 mb-4">🪨 Rock Paper Scissors Game – A fun and interactive browser game built
-                        using HTML, CSS, and JavaScript that lets users compete against the computer with real-time
-                        results.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">JavaScript</span>
-                        <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">CSS</span>
-                        <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm">HTML</span>
-                    </div>
-                </div>
-            </a>
-
-        </div>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="links-profiles" class="py-20 px-4 bg-[#05050f] relative overflow-hidden text-white">
+    <section id="links-profiles" class="py-16 md:py-20 px-4 bg-[#05050f] relative overflow-hidden text-white">
         <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 scroll-reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 scroll-reveal">
                 My <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Profiles &
                     Links</span> 🔗
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-16 scroll-reveal delay-100">
+            <div class="w-20 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-8 md:mb-16 scroll-reveal delay-100">
             </div>
 
-            <div class="flex md:grid-cols-4 gap-8 justify-center">
-
-               
-
+            <div class="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center items-center">
                 <a href="https://www.linkedin.com/in/b-sharath-chandra-7a5878336/" target="_blank"
-                    class="flex flex-col items-center p-6 rounded-2xl bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-xl scroll-reveal delay-300 w-full max-w-[180px] group">
-                    <svg class="w-12 h-12 text-white group-hover:text-blue-400 transition-colors duration-300"
+                    class="flex flex-col items-center p-4 md:p-6 rounded-2xl bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-xl scroll-reveal delay-300 w-full max-w-[150px] md:max-w-[180px] group">
+                    <svg class="w-8 h-8 md:w-12 md:h-12 text-white group-hover:text-blue-400 transition-colors duration-300"
                         fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.565-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     </svg>
-                    <p class="mt-4 text-lg font-semibold text-white">LinkedIn</p>
+                    <p class="mt-3 md:mt-4 text-base md:text-lg font-semibold text-white">LinkedIn</p>
                 </a>
 
                 <a href="https://github.com/sharath4188/aboutme" target="_blank"
-                    class="flex flex-col items-center p-6 rounded-2xl bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-xl scroll-reveal delay-400 w-full max-w-[180px] group">
-                    <svg class="w-12 h-12 text-white group-hover:text-purple-400 transition-colors duration-300"
+                    class="flex flex-col items-center p-4 md:p-6 rounded-2xl bg-gray-800 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 shadow-xl scroll-reveal delay-400 w-full max-w-[150px] md:max-w-[180px] group">
+                    <svg class="w-8 h-8 md:w-12 md:h-12 text-white group-hover:text-purple-400 transition-colors duration-300"
                         fill="currentColor" viewBox="0 0 24 24">
                         <path fill-rule="evenodd"
                             d="M12 2C6.477 2 2 6.484 2 12.017c0 4.418 2.868 8.13 6.837 9.489.5.092.682-.217.682-.483 0-.237-.009-.867-.013-1.72-2.788.625-3.376-1.34-3.376-1.34-.454-1.157-1.11-1.464-1.11-1.464-.908-.618.069-.606.069-.606 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.829.092-.647.351-1.088.636-1.338-2.22-.253-4.555-1.116-4.555-4.949 0-1.092.39-1.983 1.029-2.68a3.785 3.785 0 01.093-2.645s.84-.268 2.75 1.026c1.61-.444 3.32-.444 4.934 0 1.91-1.294 2.744-1.026 2.744-1.026.182.52.381 1.701.093 2.645.64.697 1.028 1.588 1.028 2.68 0 3.841-2.339 4.693-4.566 4.945.357.307.676.917.676 1.849 0 1.334-.012 2.41-.012 2.745 0 .266.18.58.688.484C20.897 20.142 24 16.425 24 12.017 24 6.484 19.522 2 14 2h-2z"
                             clip-rule="evenodd" />
                     </svg>
-                    <p class="mt-4 text-lg font-semibold text-white">GitHub</p>
+                    <p class="mt-3 md:mt-4 text-base md:text-lg font-semibold text-white">GitHub</p>
                 </a>
-
-            
-
             </div>
-
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900/50 border-t border-gray-800 py-8 scroll-reveal scale-in delay-100">
+    <footer class="bg-gray-900/50 border-t border-gray-800 py-6 md:py-8 scroll-reveal scale-in delay-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2024 Your Name. All rights reserved. Crafted with ❤️ and a Terminal.</p>
+            <p class="text-gray-400 text-sm md:text-base">© 2024 B. Sharath Chandra. All rights reserved. Crafted with ❤️ and a Terminal.</p>
         </div>
     </footer>
 
     <!-- Intersection Observer Script -->
     <script>
-        // Use a self-executing function to keep variables scoped
         (function () {
-            // Get all elements with the 'scroll-reveal' class
             const elements = document.querySelectorAll('.scroll-reveal');
 
             if ("IntersectionObserver" in window) {
-                // Configure the observer: trigger when 10% of the element is visible
                 const observerOptions = {
-                    root: null, // relative to the viewport
+                    root: null,
                     rootMargin: '0px',
-                    threshold: 0.1 // 10% visibility to trigger
+                    threshold: 0.1
                 };
 
                 const observer = new IntersectionObserver((entries, observer) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            // Element is now visible, add the 'visible' class
                             entry.target.classList.add('visible');
-                            // Stop observing the element once it has animated
                             observer.unobserve(entry.target);
                         }
                     });
                 }, observerOptions);
 
-                // Start observing all targeted elements
                 elements.forEach(element => {
                     observer.observe(element);
                 });
             } else {
-                // Fallback for browsers that do not support Intersection Observer
-                console.warn("Intersection Observer not supported. Adding 'visible' class immediately.");
                 elements.forEach(element => {
                     element.classList.add('visible');
                 });
@@ -665,12 +651,4 @@
         })();
     </script>
 </body>
-
-
 </html>
-
-
-
-
-
-
