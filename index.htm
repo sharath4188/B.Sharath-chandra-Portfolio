@@ -444,39 +444,56 @@
 
 
         <!-- Download Resume Button -->
-        <div  Class="flex  flex-row justify-center items-center gap-7">
-            <div class="text-center mt-12  scroll-reveal delay-600">
-                <a href="https://drive.google.com/file/d/1uI24qVlOTxaYd-k5JG1CuOlzWaAwQ7DY/view?usp=drive_link"
-                    class="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 neon-glow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Front-end Resume
-                </a>
-            </div>
-            <div class="text-center mt-12  scroll-reveal delay-600">
-                <a href="https://drive.google.com/file/d/1FTZCYx3AC9ThaPAfC1CW8JyDVWh4j4bp/view?usp=drive_link"
-                    class="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 neon-glow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    back-end Resume
-                </a>
-            </div>
-            <div class="text-center mt-12 scroll-reveal delay-600">
-                <a href="https://drive.google.com/file/d/1Fn5CkJdoxVwWgMWQjTEg377rT0HihlV6/view?usp=drive_link"
-                    class="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 neon-glow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Full-stack Resume
-                </a>
-            </div>
-        </div>
-        </div>
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-7 px-4">
+    <!-- Front-end Resume -->
+    <div class="text-center mt-6 lg:mt-12 scroll-reveal delay-600 w-full lg:w-auto">
+        <a href="https://drive.google.com/file/d/1uI24qVlOTxaYd-k5JG1CuOlzWaAwQ7DY/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full lg:w-auto min-h-[64px]">
+            <svg class="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span class="text-sm lg:text-base">Front-end Resume</span>
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+        </a>
+        <p class="text-xs text-gray-400 mt-2 lg:mt-3 hidden lg:block">React • Next.js • TypeScript</p>
+    </div>
+
+    <!-- Back-end Resume -->
+    <div class="text-center mt-6 lg:mt-12 scroll-reveal delay-600 w-full lg:w-auto">
+        <a href="https://drive.google.com/file/d/1FTZCYx3AC9ThaPAfC1CW8JyDVWh4j4bp/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full lg:w-auto min-h-[64px]">
+            <svg class="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span class="text-sm lg:text-base">Back-end Resume</span>
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+        </a>
+        <p class="text-xs text-gray-400 mt-2 lg:mt-3 hidden lg:block">Node.js • Express • MongoDB</p>
+    </div>
+
+    <!-- Full-stack Resume -->
+    <div class="text-center mt-6 lg:mt-12 scroll-reveal delay-600 w-full lg:w-auto">
+        <a href="https://drive.google.com/file/d/1Fn5CkJdoxVwWgMWQjTEg377rT0HihlV6/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-teal-600 text-white px-6 py-4 lg:px-8 lg:py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 active:scale-95 transition-all duration-300 neon-glow w-full lg:w-auto min-h-[64px]">
+            <svg class="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span class="text-sm lg:text-base">Full-stack Resume</span>
+            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-green-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+        </a>
+        <p class="text-xs text-gray-400 mt-2 lg:mt-3 hidden lg:block">MERN Stack • Full Stack</p>
+    </div>
+</div>
+    
     </section>
 
     <!-- Projects Section -->
@@ -651,6 +668,7 @@
 
 
 </html>
+
 
 
 
